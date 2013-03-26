@@ -1,4 +1,4 @@
 ml-codes
 ========
 
-Repository of codes created for machine learning tasks
+Repository of codes I wrote for machine learning tasks
