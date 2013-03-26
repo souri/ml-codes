@@ -9,8 +9,9 @@ def main():
     test = genfromtxt(open('Data/test.csv','r'), delimiter=',', dtype='f8')[1:]
 
     #create and train the random forest
-    #multi-core CPUs can use: rf = RandomForestClassifier(n_estimators=100, n_jobs=2)
-    rf = RandomForestClassifier(n_estimators=100)
+    #rf = RandomForestClassifier(n_estimators=100)
+    #use 3 of my CPU cores
+    rf = RandomForestClassifier(n_estimators=100, n_jobs=3)
     rf.fit(train, target)
     predicted_probs = [x[1] for x in rf.predict_proba(test)]
 
